@@ -23,3 +23,25 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
+
+case node['platform_family'] do
+when 'rhel'
+  include_recipe 'LinuxServer::default'
+when 'debian'
+  include_recipe 'LinuxServer::default'
+when 'amazon'
+  include_recipe 'LinuxServer::default'
+when 'suse'
+  include_recipe 'LinuxServer::default'
+when 'aix'
+  include_recipe 'chef-client::default'
+  include_recipe 'chef_client_updater'
+when 'mac_os_x'
+  include_recipe 'chef-client::default'
+  include_recipe 'chef_client_updater'
+when 'solaris'
+  include_recipe 'chef-client::default'
+  include_recipe 'chef_client_updater'
+when 'windows'
+  include_recipe 'WindowsServer::default'
+end
