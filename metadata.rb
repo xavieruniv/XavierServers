@@ -16,7 +16,7 @@ supports 'redhat'
 supports 'ubuntu'
 supports 'windows'
 
-depends 'chef-chef_client_updater'
+depends 'chef_client_updater'
 depends 'chef-client'
 depends 'LinuxServer'
 depends 'WindowsServer'
