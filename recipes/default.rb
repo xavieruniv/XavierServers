@@ -24,7 +24,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-case node['platform_family'] do
+case node['platform_family']
 when 'rhel'
   include_recipe 'LinuxServer::default'
 when 'debian'
